@@ -1,0 +1,31 @@
+/* .box {
+    padding: 10%;
+    background: white;
+    text-align: left;
+    transition: 0.25s;
+    margin-top: 100px
+} */
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    text-align: left;
+    border: 1px solid #3498db;
+    padding: 10px 10px;
+    outline: none;
+    color: black;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    border-color: #2ecc71
+}
+
+.forgot {
+    text-decoration: underline;
+}
