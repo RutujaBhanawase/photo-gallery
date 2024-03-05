@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/{% block index_page_css_file %}{% endblock %}">
+    <link rel="stylesheet" type="text/css" href="../static/css/{% block about_page_css_file %}{% endblock %}">
+    <link rel="stylesheet" type="text/css" href="../static/css/{% block services_page_css_file %}{% endblock %}">
+    <link rel="stylesheet" type="text/css" href="../static/css/{% block contact_us_page_css_file %}{% endblock %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- NAV BAR SECTION START -->
+    <section id="BPONavBar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+            <div class="container-fluid">
+                <a class="navbar-brand pb-2 pt-2 ps-5 pe-5">
+                    <!-- <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
+                    <b><span class="fs-1">ENLLIVEN DYNAMICS</span></b>
+                  </a>
+                <button class="navbar-toggler mb-2 mt-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav mb-lg-0 text-center" >
+                        <li class="nav-item pb-2 pt-2">
+                            <a class="nav-link" id="{% block home_active %}{% endblock %}" href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item pb-2 pt-2">
+                            <a class="nav-link" id="{% block about_active %}{% endblock %}" href="{{ url_for('about') }}">About</a>
+                        </li>
+                        <li class="nav-item pb-2 pt-2">
+                            <a class="nav-link" id="{% block services_active %}{% endblock %}" href="{{ url_for('services') }}">Services</a>
+                        </li>
+                        <li class="nav-item pb-2 pt-2">
+                            <a class="nav-link" id="{% block industries_served_active %}{% endblock %}" href="{{ url_for('industries_served') }}">Industries Served</a>
+                        </li>
+                        <li class="nav-item pb-2 pt-2">
+                            <a class="nav-link" id="{% block contact_us_active %}{% endblock %}" href="{{ url_for('contact_us') }}">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- NAV BAR SECTION END -->
+
+    {% block index_page %}{% endblock %}
+    {% block about_page %}{% endblock %}
+    {% block services_page %}{% endblock %}
+    {% block industries_served_page %}{% endblock %}
+    {% block contact_us_page %}{% endblock %}
+
+    
+    <!-- BOTTOM NAV BAR SECTION START -->
+    <section>
+        <div class="container-fluid ps-5 pe-5 pb-3" style="background-color: #C4DFDF;" data-aos="fade-up">
+            <div class="row text-center pt-5">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ps-3 pe-3">
+                    <hr data-aos="fade-up"><h5 class="fs-5" data-aos="fade-up">ENLLIVEN DYNAMICS</h5><hr data-aos="fade-up">
+                    <p data-aos="fade-up"> 3/2, ABC road, Richmond Town, Pune - 414402</p>
+                    <p data-aos="fade-up">
+                        <b>Mail service:</b><br>
+                        <span>abcd@enllivendynamics.com</span>
+                    </p>
+                    <p data-aos="fade-up">
+                        <b>Mobile service:</b><br>
+                        <span>+91 7559326095</span>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 disableLinks ps-3 pe-3">
+                    <hr data-aos="fade-up"><h5 class="fs-5" data-aos="fade-up">CORPORATE OVERVIEW</h5><hr data-aos="fade-up">
+                    <p data-aos="fade-up"><a href="{{ url_for('about') }}">About us</a></p>
+                    <p data-aos="fade-up"><a href="#">Partnerships</a></p>
+                    <p data-aos="fade-up"><a href="#">Corporate Citizenship</a></p>
+                    <p data-aos="fade-up"><a href="#">Research and Development</a></p>
+                    <p data-aos="fade-up"><a href="#">Engagement Models</a></p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 disableLinks ps-3 pe-3">
+                    <hr data-aos="fade-up"><h5 class="fs-5" data-aos="fade-up">INVESTOR RELATIONS</h5><hr data-aos="fade-up">
+                    <p data-aos="fade-up"><a href="#">Financials</a></p>
+                    <p data-aos="fade-up"><a href="#">Policies</a></p>
+                    <p data-aos="fade-up"><a href="#">Investor FAQs</a></p>
+                    <p data-aos="fade-up"><a href="#">SMART ODR Portal</a></p>
+                    <p data-aos="fade-up"><a href="#">SEBI Circular for Online Dispute Resolution</a></p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 disableLinks ps-3 pe-3">
+                    <hr data-aos="fade-up"><h5 class="fs-5" data-aos="fade-up">PAYMENTS</h5><hr data-aos="fade-up">
+                    <p data-aos="fade-up"><a href="#">UPI ID/QR Code</a></p>
+                    <p data-aos="fade-up"><a href="#">Pay through RuPay </a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BOTTOM NAV BAR SECTION END -->
+
+    <!-- FOOTER SECTION START -->
+    <section>
+        <footer class="text-center text-lg-start pt-4 pb-3" style="background-color:black;" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <h5 class="text-uppercase font-weight-bold text-center mb-3 text-light fs-5">Follow us on social media</h5>
+                    <ul class="socialIcons">
+                        <li class="linkedin"><a href="https://www.linkedin.com/in/omkar-santosh-raut/" target="_blank"><i class="fa fa-fw fa-linkedin"></i>LinkedIn</a></li>
+                        <li class="facebook"><a href="https://www.facebook.com/omkar.raut.94849/" target="_blank"><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
+                        <li class="twitter"><a href="https://twitter.com/Omkar56694166" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
+                        <li class="instagram"><a href="https://www.instagram.com/omkaraut333/" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
+                    </ul>
+    
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="text-center pb-2" style="background-color: black; color: white;">
+                © 2024 Copyright:
+                <a class="text-light" href="{{ url_for('home') }}">ENLLIVEN DYNAMICS</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </section>
+    <!-- FOOTER SECTION END -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</body>
+
+</html>
